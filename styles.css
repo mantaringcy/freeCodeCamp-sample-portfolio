@@ -1,0 +1,348 @@
+:root {
+    --color-1: #BE3143;
+    --color-2: white;
+    --color-3: #303841;
+    --color-4: #44567D;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    box-shadow:  0 2px 0 rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: var(--color-1);
+    z-index: 100;
+}
+
+nav ul {
+    /* border: 1px solid; */
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    /* border: 1px solid; */
+    font-size: 22px;
+    font-weight: 400;
+    list-style: none;
+}
+
+nav ul li a {
+    padding: 19.9px;
+    color: var(--color-2);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-4);
+}
+
+/* END OF NAVIGATION BAR */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(270deg, #1B1A1C, #393C3F);
+    text-align: center;
+}
+
+.wrapper .main-page h1 {
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-2);
+}
+
+.wrapper .main-page p {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 200;
+    color: var(--color-1);
+}
+
+/* END OF HOMEPAGE */
+
+.hero-section {
+    background-color: var(--color-4);
+    color: var(--color-2);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    padding: 100px 20px 110px 20px;
+    text-align: center;
+}
+
+/* HERO TEXT */
+
+.hero-section .hero-text h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+.hero-section .hero-text hr {
+    border: none;
+    background-color: var(--color-2);
+    width: 650px;
+    height: 2px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* HERO CONTENT */
+
+.hero-section .content {
+    /* border: 1px solid gold; */
+    max-width: 1280px;
+    /* width: 100%; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 39px;
+    justify-items: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+
+.hero-section .content div {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 10%);
+}
+
+.hero-section .content .project-container {
+    max-width: 400px;
+    height: 450px;
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section .content .project-container .img-container {
+    /* border: 1px solid black; */
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-section .project-container .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-section .content .project-container .desc {
+    max-height: 68px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .content .project-container .desc p {
+    font-size: 20px;
+    position: relative;
+}
+
+.hero-section .content a {
+    text-decoration: none;
+    color: white;    
+}
+
+.hero-section .content a:hover .desc p::before {
+    content: "< ";
+    color: #FF7F4F;
+    position: absolute;
+    left: -15px;
+}
+
+.hero-section .content a:hover .desc p::after {
+    content: " />";
+    color: #FF7F4F;
+    position: absolute;
+    right: -25px;
+}
+
+.hero-section .btn {
+    background-color: var(--color-3);
+    color: var(--color-2);
+    text-decoration: none;
+    padding: 10px 23px;
+    width: 145px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 10%);
+    transition: 0.3s ease-out;
+}
+
+.hero-section .btn:hover {
+    background-color: var(--color-1);
+}
+
+.hero-section .btn > i {
+    transition: 0.3s ease-out;
+} 
+
+.hero-section .btn:hover > i {
+    transform:translateX(3px)
+}
+
+.last-page {
+    width: 100%;
+    height: calc(110vh - 70px);
+    background-color: var(--color-3);
+    color: var(--color-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.last-page h2 {
+    font-size: 60px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.last-page p {
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.contact-list {
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-list .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+
+.contact-list .contact {
+    font-size: 24px;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-list .contact:hover {
+    transform: translateY(8px);
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer hr {
+    border: none;
+    background-color: var(--color-1);
+    height: 5px;
+    width: 100%;
+}
+
+footer .footer-text {
+    display: flex;
+    padding: 45px 40px;
+    text-align: left;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+footer .footer-text > p {
+    font-size: 18px;
+    font-style: normal;
+}
+
+footer .footer-text > p > a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+
+
+
+
+@media only screen and (max-width: 1320px) {
+    
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        min-height: 68px;
+    }
+
+    nav ul li {
+        font-size: 21px;
+    }
+
+    nav ul li a {
+        padding: 18.9px;
+    }
+
+
+    .wrapper .main-page h1 {
+        font-size: 58px;
+    }
+
+    .wrapper .main-page p {
+        font-size: 28px;
+    }
+
+    .hero-section h2 {
+        font-size: 40px;
+    }
+
+    .hero-section .hero-text h2{
+        font-size: 40px;
+    }
+
+    .hero-section .content {
+        margin-top: 55px;
+        margin-bottom: 65px;
+    }
+
+}
+
+@media only screen and (max-width: 855px) {
+    .last-page h2 {
+        margin-top: -150px;
+    }
+}
